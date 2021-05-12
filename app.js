@@ -18,5 +18,19 @@ let url = 'https://deckofcardsapi.com/api/deck/fsrp01s1rj6y/draw/?count=1';
 //     })
     
 $('button').click(function(e) {
-    console.log(1)
+    getCardImageURL()
 })
+
+function getCardImageURL() {
+    axios.get(url)
+        .then(resp => {
+            imageURL = resp.data.cards[0].image;
+            putCardOnPage(imageURL)
+        })
+}
+
+function putCardOnPage(url) {
+    $('.card-container').append(`
+    <img src=${imageURL}>
+    `)
+}
