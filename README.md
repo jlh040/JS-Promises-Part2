@@ -12,3 +12,4 @@
 #### Technicalities
 
 - To have this code on your computer, run: `git clone https://github.com/jlh040/JS-Promises-Part2.git` .
+- To open the website, first run the above command. Then open the index.html file in your preferred browser.
